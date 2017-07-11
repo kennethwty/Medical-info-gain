@@ -6,3 +6,9 @@ The result is also in the included word document in this repository.
 <br>
 <strong>Goal: Learn to use Java to connect to MySQL and Oracle databases and then manipulates data in the databases to find information gains. </strong><br>
 <em>Technologies used: Java, MySQL, and Oracle DB.</em>
+
+<br>
+<strong>To run the code:</strong>
+<br>
+The first part of the project creates a table that holds the 10 mutations in your local MySQL database. You will need to first download the included MySQL connector and possibly put it in the lib folder in NetBeans<br>
+The second part also needs the MySQL connector as well as the Oracle DB connector. Both connectors are already included in this repository. The path to the Oracle DB is already in the .java file. If my school still holds the data, the link will work. Thank you.
