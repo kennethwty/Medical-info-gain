@@ -6,6 +6,6 @@ This project has two parts.<br>
 <br><br>
 <strong>To run the code:</strong>
 <br>
-1) The first part of the project creates a table that holds the 10 mutations in your local MySQL database. You will need to first download the included MySQL connector and possibly put it in the lib folder in NetBeans<br>
+1. The first part of the project creates a table that holds the 10 mutations in your local MySQL database. You will need to first download the included MySQL connector and possibly put it in the lib folder in NetBeans<br>
 <br>
-2) The second part also needs the MySQL connector as well as the Oracle DB connector. Both connectors are already included in this repository. The path to the Oracle DB is already in the .java file. If my school still holds the data, the link will work. <br><br>Thank you.
+2. The second part also needs the MySQL connector as well as the Oracle DB connector. Both connectors are already included in this repository. The path to the Oracle DB is already in the .java file. If my school still holds the data, the link will work.
