@@ -1,12 +1,9 @@
 # medical-info-gain
 This project has two parts.<br>
 <b>Part 1:</b> Creates a relation (table) in MySQL database (using Java) to hold a set of mutations that will be analyzed in part 2.<br>
-<b>Part 2:</b> (Data Mining & Analysis) Finds the gene mutation that is most likely the cause of death in patients/most likely a factor that leads to death in patients by calculating information gains in a real set of medical data hosted in an Oracle database.<br><br>
-The result is also in the included word document in this repository.
-<br><br>
-<strong>Goal: Learn to use Java to connect to MySQL and Oracle databases and then manipulates data in the databases to find information gains. </strong><br><br>
-<em>Technologies used: Java, MySQL, and Oracle DB.</em>
-
+<b>Part 2:</b> (Data Mining) Finds the gene mutation that is most likely the cause of death in patients/most likely a factor that leads to death in patients by calculating information gains. This builds a decision tree that will predict whether a new patient with one or more of the targeted gene mutations will survive.<br><br>
+<br>
+<em>Technologies used: Java, JDBC, MySQL, and Oracle DB.</em>
 <br>
 <strong>To run the code:</strong>
 <br>
