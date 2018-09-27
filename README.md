@@ -4,7 +4,8 @@ This project has two parts.<br>
 
 #### Part 2: (Data Mining) Finds the gene mutation that is most likely the cause of death in patients/most likely a factor that leads to death in patients by calculating information gains. This builds a decision tree that will predict whether a new patient with one or more of the targeted gene mutations will survive.
 
-Technologies used: Java, JDBC, MySQL, and Oracle DB.
+Technologies: Java, JDBC, MySQL, Oracle DB <br>
+Concepts & Theories: Data mining, Classification, Supervised Learning, Information Gain, Entropy
 
 #### To run the code:
 1. The first part of the project creates a table that holds the 10 mutations in your local MySQL database. You will need to first download the included MySQL connector and possibly put it in the lib folder in NetBeans.
