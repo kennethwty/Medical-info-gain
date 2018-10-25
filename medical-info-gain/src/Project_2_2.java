@@ -37,13 +37,12 @@ public class Project_2_2 {
         ResultSetMetaData rsmd;
 
         /* Database credentials */
-
-        String user = "cse4701";
-        String password = "datamine";
-        String host = "query.engr.uconn.edu";
-        String port = "1521";
-        String sid = "BIBCI";
-        String url = "jdbc:oracle:thin:@" + host + ":" + port + ":" + sid;
+        String user = /* username */;
+        String password = /* password */;
+        String host = /* host name */;
+        String port = /* port number */;
+        String sid = /* sid */;
+        String url = /* url */ + host + ":" + port + ":" + sid;
 
         double A_Y1 = 0;
         double B_Y0 = 0;
