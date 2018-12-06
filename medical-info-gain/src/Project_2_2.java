@@ -85,23 +85,33 @@ public class Project_2_2 {
             //***************************//
             // Get A,B,C,D for all the genes
             for(int i = 0; i < Mutations.size(); i++) {
-                String sql = "SELECT COUNT(" + Mutations.get(i) + ") FROM IG_READY WHERE STATUS = 'Y' AND " + Mutations.get(i) + " = 1";
-                rs = stmt.executeQuery(sql);
+                PreparedStatement ps;
+                ps = "SELECT COUNT(?) FROM IG_READY WHERE STATUS = 'Y' AND ? = 1";
+                ps.setString(1, Mutations.get(i));
+                ps.setString(2, Mutations.get(i));
+                
+                rs = ps.executeQuery();
                 rsmd = rs.getMetaData();
                 while(rs.next()) {
                     A_Y1 = rs.getDouble(1);
                 }
                 overlap_A[i] = (int)A_Y1;
 
-                sql = "SELECT COUNT(" + Mutations.get(i) + ") FROM IG_READY WHERE STATUS = 'Y' AND " + Mutations.get(i) + " != 1";
-                rs = stmt.executeQuery(sql);
+                ps = "SELECT COUNT(?) FROM IG_READY WHERE STATUS = 'Y' AND ? != 1";
+                ps.setString(1, Mutations.get(i));
+                ps.setString(2, Mutations.get(i));
+                
+                rs = ps.executeQuery();
                 rsmd = rs.getMetaData();
                 while(rs.next()) {
                     B_Y0 = rs.getDouble(1);
                 }
 
-                sql = "SELECT COUNT(" + Mutations.get(i) + ") FROM IG_READY WHERE STATUS = 'N' AND " + Mutations.get(i) + " = 1";
-                rs = stmt.executeQuery(sql);
+                ps = "SELECT COUNT(?) FROM IG_READY WHERE STATUS = 'Y' AND ? != 1";
+                ps.setString(1, Mutations.get(i));
+                ps.setString(2, Mutations.get(i));
+                
+                rs = ps.executeQuery();
                 rsmd = rs.getMetaData();
                 while(rs.next()) {
                     C_N1 = rs.getDouble(1);
