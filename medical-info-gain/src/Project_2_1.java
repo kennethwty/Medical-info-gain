@@ -52,8 +52,7 @@ public class Project_2_1 {
             con = DriverManager.getConnection(url, user, password);
             stmt = con.createStatement();
 
-            String sql = "select Patient_id from Mutation ";
-            sql = "select patient_id from clinical GROUP BY Patient_id";
+            String sql = "select patient_id from clinical GROUP BY Patient_id";
             ResultSet ras = stmt.executeQuery(sql);
             ResultSetMetaData rasmd = ras.getMetaData();
             
@@ -64,11 +63,13 @@ public class Project_2_1 {
             	People.add((String)ras.getObject(1));
             }
 
+            PreparedStatement ps;
             for(String Mut : Mutations)
             {
             	ArrayList<String> Ppl = new ArrayList<String>();
-            	sql = "select patient_id from Mutation WHERE Variant_Classification != 'Silent' AND GENE_Symbol = '"+ Mut +"' GROUP BY patient_id";
-            	rs = stmt.executeQuery(sql);
+            	ps = "select patient_id from Mutation WHERE Variant_Classification != 'Silent' AND GENE_Symbol = '?' GROUP BY patient_id";
+            	ps.setString(1, Mut);
+                rs = ps.executeQuery();
             	rsmd = rs.getMetaData();
             	while(rs.next())
             	{
@@ -126,7 +127,7 @@ public class Project_2_1 {
         	DriverManager.registerDriver(new com.mysql.jdbc.Driver());
         	Connection Conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cse4701", "cse4701_user", "cse4701_user");
         	Statement Stmt = Conn.createStatement();
-        	/* THESE TWO ONLY NEED TO BE RUN ONCE */
+        	
         	String sql = "CREATE TABLE IR_READY( Patient_ID VarCHAR(20), APC int, TP53 int, KRAS int, PIK3CA int, PTEN int, ATM int, MUC4 int, SMAD4 int, SYNE1 int, FBXW7 int, Status int, Primary KEY (Patient_ID) )";
         	Stmt.executeUpdate(sql);
         	
